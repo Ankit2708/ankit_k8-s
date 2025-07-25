@@ -9,9 +9,9 @@ spec:
     app: my-app3
   template:
     metadata:
-      - name: rc-app
-        labels:
-          app: my-rc-app
+      name: rc-app
+      labels:
+        app: my-rc-app
     spec:
       containers:
         - name: nginx
