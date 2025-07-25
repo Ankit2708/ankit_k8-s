@@ -6,9 +6,10 @@ metadata:
     app: pod-app1
     env: devops
 spec:
-containers:
-  - name: podc1
-    image: nginx
-    ports:
-    - name: nginx-port
-      containerPort: 80
+  containers:
+    - name: podc1
+      image: nginx
+      ports:
+         - name: nginx-port 
+           containerPort: 80
+          
