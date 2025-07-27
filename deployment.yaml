@@ -6,9 +6,10 @@ metadata:
     app: my-deploy-app1
 spec:
   strategy:
-    type: RollingUpdate   # rolling update strategy 
-    rollingUpdate:
-      maxUnavailable: 1   #tells max no. of pods which remains unchanged
+    #type: RollingUpdate   # rolling update strategy 
+    #rollingUpdate:
+    #  maxUnavailable: 1   #tells max no. of pods which remains unchanged
+    type: Recreate
   replicas: 3
   selector:
     matchLabels: 
@@ -21,6 +22,6 @@ spec:
     spec:
       containers:
         - name: nginx-port
-          image: nginx:1.16.1
+          image: nginx:1.14.2
           ports:
             - containerPort: 80
