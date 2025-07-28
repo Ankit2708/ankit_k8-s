@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: statefull-app
+  labels:
+    app: statefulset-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: statefulset-app
+  template:
+    metadata:
+      name: statefulset-app1
+      labels:
+        app: statefulset-app
+    spec:
+      containers:
+        - name: mariadb
+          image: mariadb
+          ports:
+            - name: db
+              containerPort: 3306
+          env:
+            valueFrom:
+              ConfigMapKeyRef:
+                name: MARIADB_ROOT_PASSWORD
+                key: password
+            
+          
