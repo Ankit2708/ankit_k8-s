@@ -22,9 +22,10 @@ spec:
             - name: db
               containerPort: 3306
           env:
-            valueFrom:
-              configMapKeyRef:
-                name: MARIADB_ROOT_PASSWORD
-                key: password
+            - name: mariadbpassinfo
+              valueFrom:
+                configMapKeyRef:
+                  name: MARIADB_ROOT_PASSWORD
+                  key: password
             
           
