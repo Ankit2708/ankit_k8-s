@@ -23,7 +23,7 @@ spec:
               containerPort: 3306
           env:
             valueFrom:
-              ConfigMapKeyRef:
+              configMapKeyRef:
                 name: MARIADB_ROOT_PASSWORD
                 key: password
             
