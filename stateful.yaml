@@ -24,8 +24,10 @@ spec:
           env:
             - name: mariadbpassinfo
               valueFrom:
-                configMapKeyRef:
+                #configMapKeyRef:             #FOR CONFIG FILE
+                  #name: MARIADB_ROOT_PASSWORD
+                  #key: password
+                secretKeyRef:
                   name: MARIADB_ROOT_PASSWORD
-                  key: password
-            
+                  key: mysql_password
           
