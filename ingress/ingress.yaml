@@ -10,7 +10,8 @@ spec:
           - pathType: Prefix
             path: "/bar"
             backend:
-              service: ingress-example-service1
+              service: 
+                name: ingress-example-service1
               port:
                 number: 80
     - host: "*.foo.com"
@@ -19,6 +20,7 @@ spec:
           - pathType: Prefix
             path: "/foo"
             backend:
-              service: ingress-example-service2
+              service: 
+                name: ingress-example-service2
               port:
                 number: 80
