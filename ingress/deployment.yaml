@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: ingress-example
+  name: ingress-example1
 spec:
   selector:
     matchLabels:
-      app: ingress-example
+      app: ingress-example1
   template:
     metadata:
       labels:
-        app: ingress-example
+        app: ingress-example1
     spec:
       containers:
         - name: nginx-container
