@@ -22,5 +22,5 @@ spec:
             backend:
               service: 
                 name: ingress-example-service2
-              port:
-                number: 80
+                port:
+                  number: 80
