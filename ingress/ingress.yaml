@@ -12,8 +12,8 @@ spec:
             backend:
               service: 
                 name: ingress-example-service1
-              port:
-                number: 80
+                port:
+                  number: 80
     - host: "*.foo.com"
       http:
         paths:
