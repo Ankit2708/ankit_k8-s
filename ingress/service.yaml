@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-example-service1
+spec:
+  selector:
+    app: ingress-example
+  type: ClusterIP
+  ports:
+    - port: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-example-service2
+spec:
+  selector:
+    app: ingress-example
+  type: ClusterIP
+  ports:
+    - port: 80

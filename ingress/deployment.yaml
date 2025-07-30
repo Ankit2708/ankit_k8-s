@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: ingress-example
+spec:
+  selector:
+    matchLabels:
+      app: ingress-example
+  template:
+    metadata:
+      labels:
+        app: ingress-example
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+          ports:
+            - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: ingress-example2
+spec:
+  selector:
+    matchLabels:
+      app: ingress-example2
+  template:
+    metadata:
+      labels:
+        app: ingress-example2
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+          ports:
+            - containerPort: 80
+              
