@@ -16,7 +16,7 @@ metadata:
   name: ingress-example-service2
 spec:
   selector:
-    app: ingress-example
+    app: ingress-example2
   type: ClusterIP
   ports:
     - port: 80
