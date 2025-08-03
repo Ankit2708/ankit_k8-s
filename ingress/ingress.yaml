@@ -8,7 +8,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: "/bar"
+            path: "/"
             backend:
               service: 
                 name: ingress-example-service1
@@ -18,7 +18,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: "/foo"
+            path: "/"
             backend:
               service: 
                 name: ingress-example-service2
